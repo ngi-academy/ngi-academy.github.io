@@ -5,7 +5,6 @@ title: The Evolution of Technology Across Industries - A Journey Through Time
 excerpt: The evolution of technology across industries is a testament to human ingenuity and our ability to adapt to an ever-changing world. From the industrial age to the digital era, each leap forward has brought about new possibilities and challenges. As we stand at the cusp of the fourth industrial revolution, the trajectory of technology continues to shape the future, offering boundless opportunities for progress and improvement across every facet of our lives.
 comments: true
 ---
-![Tech-Evolution](/assets/images/photo-1599008633840-052c7f756385.jpeg){:class="img-responsive"}
 
 ## Introduction
 

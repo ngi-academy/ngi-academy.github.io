@@ -6,8 +6,6 @@ excerpt: Visual programming, led by platforms like code.org and Google's Blockly
 comments: true
 ---
 
-![Visual-Programming](/assets/images/photo-1603354350317-6f7aaa5911c5.jpeg){:class="img-responsive"}
-
 ## Introduction
 
 In the ever-evolving landscape of programming education, visual programming has emerged as a transformative force, breaking down barriers and making coding accessible to learners of all ages. Platforms like code.org and Google's Blockly have revolutionized the way programming is taught, offering unprecedented effectiveness in imparting crucial skills.
