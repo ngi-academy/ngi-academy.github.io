@@ -6,8 +6,6 @@ excerpt: In the dynamic realm of technology, creativity isn't just a spark; it's
 comments: true
 ---
 
-![Unleash-Creativity-In-Tech](/assets/images/photo-1501349800519-48093d60bde0.jpeg){:class="img-responsive"}
-
 ## Introduction
 
 In the fast-paced realm of technology, creativity has become a driving force behind innovation. As the boundaries of what is possible continue to expand, the need for creative thinking in the tech industry has never been more crucial. Unleashing creativity in technology not only fosters groundbreaking solutions but also cultivates a dynamic and resilient workforce. In this blog, we explore the importance of creativity in tech and how it can be nurtured to propel the industry forward.
