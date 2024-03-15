@@ -489,6 +489,83 @@ int[] sortedArray = {1, 2, 3, 4, 5};
 int target = 3;
 int index = Arrays.binarySearch(sortedArray, target);
 ```
+<details>
+<summary>
+BinarySearch Demo
+</summary>
+
+{% highlight java %}
+public class BinarySearchDemo {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+        int key = 13;
+        int index = binarySearch(arr, key);
+        if (index != -1) {
+            System.out.println("Element found at index: " + index);
+        } else {
+            System.out.println("Element not found");
+        }
+        index = recursiveBinarySearch(arr, key, 0, arr.length - 1);
+        if (index != -1) {
+            System.out.println("Using recursion method, element found at index: " + index);
+        } else {
+            System.out.println("Using recursion method, element not found");
+        }
+        /*
+         * Output:
+         * Element found at index: 6
+         * Using recursion method, element found at index: 6
+         */
+    }
+
+    /**
+     * Performs a binary search on a sorted array to find the index of a given key.
+     *
+     * @param arr the sorted array to search in
+     * @param key the value to search for
+     * @return the index of the key if found, -1 otherwise
+     */
+    private static int binarySearch(int[] arr, int key) {
+        int low = 0;
+        int high = arr.length - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] == key) {
+                return mid;
+            } else if (arr[mid] < key) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Performs a recursive binary search on a sorted array to find the index of a given key.
+     *
+     * @param arr  the sorted array to search in
+     * @param key  the key to search for
+     * @param low  the lower bound of the search range
+     * @param high the upper bound of the search range
+     * @return the index of the key in the array, or -1 if the key is not found
+     */
+    private static int recursiveBinarySearch(int[] arr, int key, int low, int high) {
+        if (low > high) {
+            return -1;
+        }
+        int mid = (low + high) / 2;
+        if (arr[mid] == key) {
+            return mid;
+        } else if (arr[mid] < key) {
+            return recursiveBinarySearch(arr, key, mid + 1, high);
+        } else {
+            return recursiveBinarySearch(arr, key, low, mid - 1);
+        }
+    }
+}
+{% endhighlight %}
+</details>
 
 ### 2. Sorting Algorithms
 #### Merge Sort
@@ -497,12 +574,170 @@ int index = Arrays.binarySearch(sortedArray, target);
 int[] arrayToSort = {5, 2, 9, 1, 5, 6};
 MergeSort.sort(arrayToSort);
 ```
+<details>
+<summary>
+MergeSort Demo
+</summary>
+
+{% highlight java %}
+import java.util.Arrays;
+
+public class MergeSortDemo {
+    public static void main(String[] args) {
+        int[] arr = {38, 27, 43, 3, 9, 82, 10};
+        mergeSort(arr, 0, arr.length - 1);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+        /*
+         * Output:
+         * Sorted array: [3, 9, 10, 27, 38, 43, 82]
+         */
+    }
+
+    /**
+     * Sorts the given array using the merge sort algorithm.
+     *
+     * @param arr   the array to be sorted
+     * @param left  the starting index of the subarray to be sorted
+     * @param right the ending index of the subarray to be sorted
+     */
+    public static void mergeSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+
+            // Recursively sort the left and right halves
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+
+            // Merge the sorted halves
+            merge(arr, left, mid, right);
+        }
+    }
+
+    /**
+     * Merges two subarrays of the given array.
+     *
+     * @param arr   the array to be sorted
+     * @param left  the starting index of the first subarray
+     * @param mid   the ending index of the first subarray
+     * @param right the ending index of the second subarray
+     */
+    public static void merge(int[] arr, int left, int mid, int right) {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+
+        int[] leftArr = new int[n1];
+        int[] rightArr = new int[n2];
+
+        // Copy data to temporary arrays
+        for (int i = 0; i < n1; i++)
+            leftArr[i] = arr[left + i];
+        for (int j = 0; j < n2; j++)
+            rightArr[j] = arr[mid + 1 + j];
+
+        // Merge the two arrays
+        int i = 0, j = 0, k = left;
+        while (i < n1 && j < n2) {
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k] = leftArr[i];
+                i++;
+            } else {
+                arr[k] = rightArr[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Copy remaining elements from leftArr and rightArr
+        while (i < n1) {
+            arr[k] = leftArr[i];
+            i++;
+            k++;
+        }
+        while (j < n2) {
+            arr[k] = rightArr[j];
+            j++;
+            k++;
+        }
+    }
+}
+{% endhighlight %}
+</details>
 #### Quick Sort
 ```java
 // Example: Quick Sort
 int[] arrayToSort = {5, 2, 9, 1, 5, 6};
 QuickSort.sort(arrayToSort);
 ```
+<details>
+<summary>
+QuickSort Demo
+</summary>
+
+{% highlight java %}
+import java.util.Arrays;
+
+public class QuickSortDemo {
+    public static void main(String[] args) {
+        int[] arr = {38, 27, 43, 3, 9, 82, 10};
+        quickSort(arr, 0, arr.length - 1);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+        /*
+         * Output:
+         * Sorted array: [3, 9, 10, 27, 38, 43, 82]
+         */
+    }
+
+    /**
+     * Sorts the given array using the quick sort algorithm.
+     *
+     * @param arr   the array to be sorted
+     * @param left  the starting index of the subarray to be sorted
+     * @param right the ending index of the subarray to be sorted
+     */
+    public static void quickSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int pivotIndex = partition(arr, left, right);
+            quickSort(arr, left, pivotIndex - 1);
+            quickSort(arr, pivotIndex + 1, right);
+        }
+    }
+
+    /**
+     * Partitions the given array and returns the index of the pivot element.
+     *
+     * @param arr   the array to be sorted
+     * @param left  the starting index of the subarray to be sorted
+     * @param right the ending index of the subarray to be sorted
+     * @return the index of the pivot element
+     */
+    public static int partition(int[] arr, int left, int right) {
+        int pivot = arr[right];
+        int i = left - 1;
+        for (int j = left; j < right; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                swap(arr, i, j);
+            }
+        }
+        swap(arr, i + 1, right);
+        return i + 1;
+    }
+
+    /**
+     * Swaps the elements at the specified indices in the given array.
+     *
+     * @param arr the array in which to swap elements
+     * @param i   the index of the first element
+     * @param j   the index of the second element
+     */
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+{% endhighlight %}
+</details>
 
 ### 3. Graph Algorithms
 #### Breadth-First Search (BFS)
@@ -514,6 +749,14 @@ graph.addVertex("B");
 graph.addEdge("A", "B");
 graph.BFS("A");
 ```
+<details>
+<summary>
+Breadth First Search Demo
+</summary>
+
+{% highlight java %}
+{% endhighlight %}
+</details>
 
 #### Depth-First Search (DFS)
 ```java
@@ -524,6 +767,14 @@ graph.addVertex("B");
 graph.addEdge("A", "B");
 graph.DFS("A");
 ```
+<details>
+<summary>
+Depth First Search Demo
+</summary>
+
+{% highlight java %}
+{% endhighlight %}
+</details>
 ### 4. Dynamic Programming
 #### Fibonacci Sequence
 
@@ -533,6 +784,14 @@ int n = 10;
 int[] fibArray = new int[n + 1];
 int result = fibonacci(n, fibArray);
 ```
+<details>
+<summary>
+Fibonacci Sequence Demo
+</summary>
+
+{% highlight java %}
+{% endhighlight %}
+</details>
 
 ## Space and Time Complexities
 

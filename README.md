@@ -24,5 +24,6 @@ NGI Academy is committed to bridging the gap in tech education by providing high
 * [Website](https://ngi-academy.github.io/)
 * [YouTube](https://www.youtube.com/channel/UCNKcLfo8BDgzb5ehVa5LD7A)
 * [LinkedIn](https://www.linkedin.com/company/ngi-academy)
+* [Substack](https://ngiacademy.substack.com/)
 
 Join us on our journey to make tech education accessible to every individual, and let's shape the future together!
