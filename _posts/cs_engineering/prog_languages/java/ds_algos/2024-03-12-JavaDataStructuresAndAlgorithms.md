@@ -3,6 +3,7 @@ layout: post
 author: sheikirfanbasha
 title: Java Data Structures and Algorithms
 excerpt: In the vast realm of Java programming, understanding data structures and algorithms is akin to having a robust toolkit. In this exploration, we'll delve into the essential data structures and algorithms available in Java, empowering developers to craft efficient and scalable solutions.
+categories: blog
 comments: true
 ---
 

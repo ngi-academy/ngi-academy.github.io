@@ -3,6 +3,7 @@ layout: post
 author: sheikirfanbasha
 title: Java Basic Constructs
 excerpt: Review Java syntax, data types, control flow, and basic language features.
+categories: blog
 comments: true
 ---
 Let's explore the basic constructs of Java:
