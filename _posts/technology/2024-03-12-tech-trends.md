@@ -3,6 +3,7 @@ layout: post
 author: sheikirfanbasha
 title: Tomorrow’s Technological Trends - Unlocking Innovation
 excerpt: From AI advancements to sustainable tech, 5G, quantum computing, and the Metaverse, tomorrow’s landscape promises innovation, efficiency, and positive change.
+categories: blog
 comments: true
 ---
 

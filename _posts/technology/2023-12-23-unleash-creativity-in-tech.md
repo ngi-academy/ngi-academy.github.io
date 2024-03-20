@@ -3,6 +3,7 @@ layout: post
 author: sheikirfanbasha
 title: Unleashing Creativity in Tech - Igniting Innovation in the Digital Era
 excerpt: In the dynamic realm of technology, creativity isn't just a spark; it's the lifeline of innovation. Embracing a culture that encourages cross-disciplinary collaboration, nurtures a growth mindset, and allocates time for creative exploration propels the tech industry into uncharted territories, where groundbreaking solutions await discovery.
+categories: blog
 comments: true
 ---
 

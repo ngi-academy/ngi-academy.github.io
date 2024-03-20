@@ -3,6 +3,7 @@ layout: post
 author: sheikirfanbasha
 title: Revolutionizing Programming Education - The Power of Visual Programming Platforms
 excerpt: Visual programming, led by platforms like code.org and Google's Blockly, revolutionizes coding education. Breaking down syntax barriers, it makes programming accessible to all ages through engaging, interactive learning. With a focus on creativity and problem-solving, these platforms redefine the coding journey, turning it into an enjoyable adventure for learners worldwide.
+categories: blog
 comments: true
 ---
 
